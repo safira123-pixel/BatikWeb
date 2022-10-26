@@ -13,10 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('informasi_batik', function (Blueprint $table) {
-            $table->id();
-            $table->varchar('foto');
-            $table->string('keterangan');
+        Schema::create('transaction', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->integer('user_id');
+            $table->date('tanggal');
+            $table->string('status');
+            $table->integer('kode');
+            $table->integer('jumlah_harga');
             $table->timestamps();
         });
     }
@@ -28,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('informasi_batik');
+        Schema::dropIfExists('transaction');
     }
 };

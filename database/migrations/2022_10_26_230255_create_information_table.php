@@ -13,8 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('cetak_struk', function (Blueprint $table) {
+        Schema::create('information', function (Blueprint $table) {
             $table->id();
+            $table->varchar('foto');
+            $table->string('keterangan');
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cetak_struk');
+        Schema::dropIfExists('information');
     }
 };
