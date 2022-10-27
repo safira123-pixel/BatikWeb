@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class informasi_batik extends Model
 {
     use HasFactory;
+    protected $table = 'information';
+    protected $fillable = [
+        'foto',
+        'keterangan',
+    ];
 }

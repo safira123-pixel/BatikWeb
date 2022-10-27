@@ -9,7 +9,7 @@ class transaksi extends Model
 {
     protected $table = 'transaksi';
     protected $fillable = [
-        'barang_id',
+        'product_id',
         'user_id',
         'tanggal',
         'status',
@@ -25,7 +25,7 @@ class transaksi extends Model
 
     public function barang()
     {
-        return $this->belongsTo('App\Models\Barang', 'barang_id');
+        return $this->belongsTo('App\Models\Product', 'product_id');
     }
 }
 

@@ -13,12 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('transaction_detail', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->integer('product_id');
-            $table->integer('jumlah');
-            $table->integer('jumlah_harga');
-            $table->timestamps();
+        Schema::table('users', function (Blueprint $table) {
+            $table->string('role', 16)->default('user')->after('password');
         });
     }
 
@@ -29,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('transaction_detail');
+        Schema::table('user', function (Blueprint $table) {
+            //
+        });
     }
 };

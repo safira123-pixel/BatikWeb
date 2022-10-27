@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('transaction', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('user_id');
+            $table->integer('product_id');
             $table->date('tanggal');
             $table->string('status');
             $table->integer('kode');
