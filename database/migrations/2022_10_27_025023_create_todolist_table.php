@@ -5,7 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
-{
+{   
     /**
      * Run the migrations.
      *
@@ -13,14 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('transaction', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->integer('user_id');
-            $table->integer('product_id');
-            $table->date('tanggal');
+        Schema::create('todolist', function (Blueprint $table) {
+            $table->id();
+            $table->string('isi_list');
             $table->string('status');
-            $table->integer('kode');
-            $table->integer('jumlah_harga');
             $table->timestamps();
         });
     }
@@ -32,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('transaction');
+        Schema::dropIfExists('todolist');
     }
 };

@@ -13,16 +13,6 @@ return new class extends Migration
      */
     public function up()
     {
-        //
-    }
-
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
         Schema::table('product', function (Blueprint $table) {
             $table->unsignedBigInteger('category_id')->nullable()->unique();
             $table->foreign('category_id')->references('id')->on('category')->onDelete('cascade');
@@ -39,22 +29,48 @@ return new class extends Migration
 
         });
 
-        Schema::table('transaction', function (Blueprint $table) {
+        Schema::table('order', function (Blueprint $table) {
             $table->unsignedBigInteger('user_id')->nullable()->unique();
             $table->foreign('user_id')->references('id')->on('user')->onDelete('cascade');
 
         });
 
-        Schema::table('transaction', function (Blueprint $table) {
+        Schema::table('order', function (Blueprint $table) {
             $table->unsignedBigInteger('product_id')->nullable()->unique();
             $table->foreign('product_id')->references('id')->on('product')->onDelete('cascade');
 
         });
 
-        Schema::table('transaction_detail', function (Blueprint $table) {
+        Schema::table('order_product', function (Blueprint $table) {
             $table->unsignedBigInteger('product_id')->nullable()->unique();
             $table->foreign('product_id')->references('id')->on('product')->onDelete('cascade');
 
         });
+
+        Schema::table('order_product', function (Blueprint $table) {
+            $table->unsignedBigInteger('order_id')->nullable()->unique();
+            $table->foreign('order_id')->references('id')->on('order')->onDelete('cascade');
+
+        });
+
+        Schema::table('todolist', function (Blueprint $table) {
+            $table->unsignedBigInteger('user_id')->nullable()->unique();
+            $table->foreign('user_id')->references('id')->on('user')->onDelete('cascade');
+    });
+
+    Schema::table('report', function (Blueprint $table) {
+        $table->unsignedBigInteger('product_id')->nullable()->unique();
+        $table->foreign('product_id')->references('id')->on('product')->onDelete('cascade');
+});
+}
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        //
     }
 };

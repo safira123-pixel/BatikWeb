@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class barang extends Model
+class product extends Model
 {
     use HasFactory;
     protected $dates = ['deleted_at'];
@@ -18,8 +18,13 @@ class barang extends Model
         'harga',
     ];
 
-    public function kategori() {
-        return $this->belongsTo('App\Models\Kategori', 'kategori_id');
+    public function category() {
+        return $this->belongsTo(Category::class);
+    }
+
+    public function order_product()
+    {
+        return $this->belongsTo(Order_Product::class);
     }
 
 }
