@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\HomepageController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +19,13 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+
+ Route::group(['prefix' => 'admin'], function() {
+    Route::get('/', [AdminController::class, 'index'])->name('admin_dashboard');
+  });
+  Route::group(['prefix' => 'worker'], function() {
+    Route::get('/', [WorkerController::class, 'index'])->name('worker_dashboard');
+  });
 
 Route::get('/homepage', [HomepageController::class,'index']);
 
