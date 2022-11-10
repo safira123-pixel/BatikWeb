@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('todolist', function (Blueprint $table) {
             $table->id();
-            $table->string('isi_list');
+            $table->string('list');
             $table->string('status');
             $table->timestamps();
         });

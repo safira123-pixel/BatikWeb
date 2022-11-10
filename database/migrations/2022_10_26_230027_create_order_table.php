@@ -18,7 +18,7 @@ return new class extends Migration
             $table->integer('user_id');
             $table->integer('product_id');
             $table->date('date');
-            $table->string('status',['belum bayar','menunggu verifikasi','dibayar','ditolak']);
+            $table->string('status');
             $table->integer('code');
             $table->integer('total_price');
             $table->timestamps();
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('transaction');
+        Schema::dropIfExists('order');
     }
 };

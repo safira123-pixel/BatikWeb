@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('report', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_barang');
+            $table->string('name');
             $table->integer('stok');
             $table->timestamps();
         });
