@@ -7,9 +7,9 @@
     <img src="{{asset('images/kunci.jpg') }}" alt="foto produk" class="card-img-top">  
       <div class="container" style="background-color: #add8e6;">
       <h1 class="text-center"><strong>OMAH BATIK 78</strong></h1>
-      <h4 class="text-center">TOKO BATIK ONLINE YANG BERKUALITAS DAN TERPERCAYA DI JEMBER</h4></div>
+      <h4 class="text-center">text</h4></div>
       <hr>
-      <h5>Toko Batik 78 Melayani pemesanan aneka pakaian batik dan peralatan batik, hubungi :<strong> 081-370-587-320</strong></h5>
+      <h5>text</h5>
         <div class="col-md-12 text-center">
             <button type="button" class="btn btn-primary" href="https://wa.me/6281370587320?text=Saya%20tertarik%20untuk%20merental%20mobil%20Anda">WhatsApp</button>
             <button type="button" class="btn btn-primary" href="tel:+6281370587320">Telephone</button>

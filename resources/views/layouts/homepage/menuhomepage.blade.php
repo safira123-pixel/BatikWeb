@@ -3,6 +3,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
   <div class="container">
   <a class="navbar-brand" href="/homepage">OMAH BATIK 78</a>
+  <img src="{{ asset('images/RemoverBgOmahBatik.png') }}" class="d-block w-100" alt="...">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

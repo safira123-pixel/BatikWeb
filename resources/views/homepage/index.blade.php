@@ -89,7 +89,7 @@
     <!-- produk ketiga -->
     <div class="col-md-4">
       <div class="card mb-4 shadow-sm">
-          <img src="{{asset('images/AvanzaToyota.jpeg') }}" alt="foto produk" class="card-img-top">
+          <img src="{{asset('images/') }}" alt="foto produk" class="card-img-top">
         <div class="card-body">
             <p class="card-text">
               <b>Kemeja batik pria</b>
@@ -108,7 +108,7 @@
           </div>
         </div>
       </div>
-      <a class="btn btn-primary plus float-right" href="{{ URL::to('login') }}" target="harus_login"><h7> And Many More </h7></a>
+      <a class="btn btn-primary plus float-right" href="{{ URL::to('login') }}" target="harus_login"><h7> Next</h7></a>
     </div>
   </div>
   <!-- end produk -->
